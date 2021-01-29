@@ -1,8 +1,8 @@
 <script>
-    import RoutifyIntro from './example/_components/RoutifyIntro.svelte'
     import { metatags } from '@roxi/routify'
+    import Main from '../components/main.svelte';
     metatags.title = 'My Routify app'
     metatags.description = 'Description coming soon...'
 </script>
 
-<RoutifyIntro />
+<Main />
