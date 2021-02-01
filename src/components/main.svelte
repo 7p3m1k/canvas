@@ -7,11 +7,13 @@
 
 
 <style lang="scss">
+  
   div {
     background-color: blue;
+    
     h1 {
-    color: red;
-  }
+      color: red;
+    }
   }
   
 </style>
