@@ -10,15 +10,15 @@
   }
 
   function drawArc() {
-    let myCanvas = document.getElementById("myCanvas");
-    let ctx = myCanvas.getContext('2d');
+    let myCanvas2 = document.getElementById("myCanvas2");
+    let ctx = myCanvas2.getContext('2d');
 
     ctx.beginPath();
     // 중심점 x, 중심점 y, 반지름의 길이, 시작점의 위치(0 -3시방향), 종료위치, 방향    Math.PI는 180도
     ctx.arc(75, 75, 50, 0, Math.PI * 2, true);
 
     ctx.moveTo(110, 75);
-    ctx.arc(75, 75, 35, 0, Math.PI * 2, false);
+    ctx.arc(75, 75, 35, 0, Math.PI, false);
 
     ctx.moveTo(65, 65);
     ctx.arc(60, 65, 5, 0, Math.PI * 2, true);
@@ -31,8 +31,8 @@
   }
 
   function drawLine() {
-    let myCanvas = document.getElementById("myCanvas");
-    let ctx = myCanvas.getContext('2d');
+    let myCanvas3 = document.getElementById("myCanvas3");
+    let ctx = myCanvas3.getContext('2d');
 
     //삼각형
     ctx.beginPath();
@@ -53,7 +53,7 @@
 </script>
 
 <h2 class="title">네모 그리기,스마일 그리기,선그리기</h2>
-<span class="date">2021-02-01</span>
+<span class="date">2021-02-02</span>
 <p class="description">
   fillRect: 내부에 색상을 칠한 네모를 그린다. <br/>
   clearRect: 내부에 투명색을 칠한 네모를 그린다. <br/>
@@ -76,8 +76,12 @@
   lineTo: 선의 끔점을 설정한다.
 </p>
 
-<canvas id="myCanvas" style="width:300px; height:300px; border:1px solid red"></canvas>
-<br/>
+<div>
+  <canvas id="myCanvas" style="width:300px; height:300px; border:1px solid red"></canvas>
+  <canvas id="myCanvas2" style="width:300px; height:300px; border:1px solid red"></canvas>
+  <canvas id="myCanvas3" style="width:300px; height:300px; border:1px solid red"></canvas>
+</div>
+
 <button on:click={drawRect}>네모 !</button>
 <button on:click={drawArc}>원 !</button>
 <button on:click={drawLine}>선 !</button>
@@ -86,4 +90,8 @@
 <style>
     @import url("./canvasText.css");
 
+  div {
+    display: flex;
+
+  }
 </style>
