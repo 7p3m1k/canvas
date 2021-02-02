@@ -1,18 +1,86 @@
 <script>
 
+  function drawRect() {
+    let myCanvas = document.getElementById("myCanvas");
+    let ctx = myCanvas.getContext('2d');
+
+    ctx.fillRect(25, 25, 100, 100);
+    ctx.clearRect(45, 45, 60, 60);
+    ctx.strokeRect(50, 50, 50, 50);
+  }
+
+  function drawArc() {
+    let myCanvas = document.getElementById("myCanvas");
+    let ctx = myCanvas.getContext('2d');
+
+    ctx.beginPath();
+    // 중심점 x, 중심점 y, 반지름의 길이, 시작점의 위치(0 -3시방향), 종료위치, 방향    Math.PI는 180도
+    ctx.arc(75, 75, 50, 0, Math.PI * 2, true);
+
+    ctx.moveTo(110, 75);
+    ctx.arc(75, 75, 35, 0, Math.PI * 2, false);
+
+    ctx.moveTo(65, 65);
+    ctx.arc(60, 65, 5, 0, Math.PI * 2, true);
+
+    ctx.moveTo(95, 65);
+    ctx.arc(90, 65, 5, 0, Math.PI * 2, true);
+
+    ctx.stroke(); //선으로 그려진다
+     //ctx.fill(); //꽉차게 그려진다
+  }
+
+  function drawLine() {
+    let myCanvas = document.getElementById("myCanvas");
+    let ctx = myCanvas.getContext('2d');
+
+    //삼각형
+    ctx.beginPath();
+    ctx.moveTo(25, 25);
+    ctx.lineTo(105, 25);
+    ctx.lineTo(25, 105);
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(125, 125);
+    ctx.lineTo(125, 45);
+    ctx.lineTo(45, 125);
+    ctx.closePath();
+    ctx.stroke();
+  }
+
+
 </script>
 
-<h2 class="title">파일 이름 샘플</h2>
-<span class="date">2021-02-02</span>
+<h2 class="title">네모 그리기,스마일 그리기,선그리기</h2>
+<span class="date">2021-02-01</span>
 <p class="description">
-    파일명 canvas 폴더 하위에 저장하고, 파일명은 canvas_mm_dd 형식으로 작성.<br>
-    추후에 파일이 많아지면 월별 카테고리화해서 접이식 메뉴로 변경.<br>
-    template 파일을 매번 복사해서 쓰는 방식 추천. 수정해도 무방. 확인 후 본 파일도 삭제.
+  fillRect: 내부에 색상을 칠한 네모를 그린다. <br/>
+  clearRect: 내부에 투명색을 칠한 네모를 그린다. <br/>
+  strokeRect: 선으로만 이루어진 네모를 그린다.
 </p>
 
-<canvas>
+<p class="description">
+  beginPath: 선 그리기 시작을 알리는 함수. <br/>
+  moveTo: 시작 점 위치를 이동한다. <br/>
+  fill: 내부를 칠하며 그린다.<br/>
+  stroke: 선으로 그린다.<br/>
+  arc: 원 또는 타원을 그린다.
+</p>
 
-</canvas>
+<p class="description">
+  beginPath: 선 그리기 시작을 알리는 함수. <br/>
+  moveTo: 시작 점 위치를 이동한다. <br/>
+  fill: 내부를 칠하며 그린다.<br/>
+  stroke: 선으로 그린다.<br/>
+  lineTo: 선의 끔점을 설정한다.
+</p>
+
+<canvas id="myCanvas" style="width:300px; height:300px; border:1px solid red"></canvas>
+<br/>
+<button on:click={drawRect}>네모 !</button>
+<button on:click={drawArc}>원 !</button>
+<button on:click={drawLine}>선 !</button>
 
 
 <style>
