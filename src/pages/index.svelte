@@ -6,4 +6,3 @@
     metatags.description = 'Description coming soon...'
 </script>
 
-<Main />
