@@ -1,7 +1,6 @@
 <script>
 import { onMount } from 'svelte';
 
-
  onMount(()=> {
     let myCanvas = document.getElementById("myCanvas");
     let ctx = myCanvas.getContext('2d');
