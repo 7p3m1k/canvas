@@ -11,9 +11,9 @@
         ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
         ctx.fillRect(30, 30, 100, 100);
     })
-  
   </script>
-  
+
+
   <h2 class="title">두 개의 교차하는 직사각형,색 채워 넣기</h2>
   <span class="date">2021-02-04</span>
   <p class="description">
