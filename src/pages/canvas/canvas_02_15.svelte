@@ -43,6 +43,39 @@
     }
   })
 
+  onMount(()=> {
+    let c = document.getElementById("canvas3");
+    let ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.lineJoin = "round";
+    ctx.moveTo(20, 20);
+    ctx.lineTo(100, 50);
+    ctx.lineTo(20, 100);
+    ctx.stroke();
+  })
+
+  onMount(()=> {
+    let cd = document.getElementById("canvas4");
+    let ctx = cd.getContext("2d");
+    ctx.beginPath();
+    ctx.lineJoin = "bevel";
+    ctx.moveTo(20, 20);
+    ctx.lineTo(100, 50);
+    ctx.lineTo(20, 100);
+    ctx.stroke();
+  })
+
+  onMount(()=> {
+    let ce = document.getElementById("canvas5");
+    let ctx = ce.getContext("2d");
+    ctx.beginPath();
+    ctx.lineJoin = "miter";
+    ctx.moveTo(20, 20);
+    ctx.lineTo(100, 50);
+    ctx.lineTo(20, 100);
+    ctx.stroke();
+  })
+
   </script>
   
   <h2 class="title">선 스타일 2</h2>
@@ -68,8 +101,13 @@
   </p>
   <h3>기본 속성은 (miter)</h3>
   <div>
-    <canvas id="canvas" width="1000" height="500"></canvas>
+    <canvas id="canvas" width="1000" height="300"></canvas>
   </div>
+
+    <canvas id="canvas3" width="100" height="100"></canvas>
+    <canvas id="canvas4" width="100" height="100"></canvas>
+    <canvas id="canvas5" width="100" height="100"></canvas>
+    왼쪽부터 round,bevel,miter 순 (뭐가 다른거지?...)
 
 
   <style>
