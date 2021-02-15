@@ -15,7 +15,6 @@
     ctx.quadraticCurveTo(125, 25, 75, 25);
     ctx.stroke();
     })
-  
   </script>
   
   <h2 class="title">말풍선 그리기 (Bezier and quadratic curves)</h2>
