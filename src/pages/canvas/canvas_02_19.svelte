@@ -70,7 +70,13 @@
 <h2 class="title">태극마크 ver2 (색넣기)</h2>
 <span class="date">2021-02-19</span>
 <p class="description">
-32도 기울어진 반지름을 이용하여 만들었다.
+32도 기울어진 반지름을 이용하여 만들었다. 원안에 원을 넣어서 반을 나눈 느낌으루...<br/>
+
+const radian = Math.PI / 180 ;<br/>
+<br/>
+const radius = 150;<br/>
+const rotateDegree = 32;<br/>
+radian,radius,rotateDegree 미리 선언해주면 사용하기 편하다.
 </p>
 
 
