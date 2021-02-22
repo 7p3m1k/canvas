@@ -22,11 +22,11 @@
 </div>
 
 {#if current === 'Lookbook'}
-<ul>
-  <li>2020</li>
-  <li>2019</li>
-  <li>2018</li>
-</ul>
+  <ul class="lookbook-menu" on:mouseleave={() => current = ''}> 
+    <li>2020</li>
+    <li>2019</li>
+    <li>2018</li>
+  </ul>
 {/if}
 
 {#if current === 'Shop'}
@@ -41,7 +41,7 @@
 
 <style lang="scss">
   .header {
-    position: fixed;
+  position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -78,5 +78,20 @@
         cursor: pointer;
       }
     }
+  }
+  .lookbook-menu {
+    margin-left: 550px;
+    width: 158px;
+
+    li {
+      border: 1px solid black;
+      border-top: none;
+      cursor: pointer;
+      padding: 10px 20px;
+    }
+
+    li:first-child {
+        border-top: none;
+      }
   }
 </style>

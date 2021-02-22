@@ -173,7 +173,6 @@
 <h2 class="title">태극기</h2>
 <span class="date">2021-02-22</span>
 <p class="description">
-  
 </p>
 
 
