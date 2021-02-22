@@ -68,17 +68,17 @@
     )
     ctx.fill();
 
-    //보조선
-    ctx.beginPath();
-    ctx.arc(
-      radius * 3,
-      radius * 2,
-      radius + radius * ( 1 / 2 ),
-      0 * radian,
-      360 * radian,
-      true
-    )
-    ctx.stroke();
+    // //보조선
+    // ctx.beginPath();
+    // ctx.arc(
+    //   radius * 3,
+    //   radius * 2,
+    //   radius + radius * ( 1 / 2 ),
+    //   0 * radian,
+    //   360 * radian,
+    //   true
+    // )
+    // ctx.stroke();
 
     //건 부분
     ctx.resetTransform();
@@ -93,20 +93,87 @@
 
     ctx.beginPath();
     ctx.fillRect(0, rectHeight * 2 + rectMargin * 2 , rectWidth, rectHeight);
+
+    //리 부분
+    ctx.resetTransform();
+    ctx.translate(220,345);
+    ctx.rotate((30 + rotateDegree) * radian);
+    ctx.fillStyle='black';
+    ctx.beginPath();
+    ctx.fillRect(0, 0, radius, radius / 6);
+
+    ctx.beginPath();
+    ctx.fillRect(0, rectHeight + rectMargin , rectWidth, rectHeight);
+
+    ctx.beginPath();
+    ctx.fillRect(0, rectHeight * 2 + rectMargin * 2 , rectWidth, rectHeight);
+
+    //흰색 부분
+    ctx.resetTransform();
+    ctx.translate(253,405);
+    ctx.rotate((30 + rotateDegree) * radian);
+    ctx.fillStyle='white';
+    ctx.beginPath();
+    ctx.fillRect(0, rectHeight + rectMargin, rectMargin, rectHeight + 10);
+
+    //감 부분
+    ctx.resetTransform();
+    ctx.translate(680,55);
+    ctx.rotate((25 + rotateDegree) * radian);
+    ctx.fillStyle = 'black';
+    ctx.beginPath();
+    ctx.fillRect(0, 0, rectWidth, rectHeight);
+
+    ctx.beginPath();
+    ctx.fillRect(0, rectHeight + rectMargin , rectWidth, rectHeight);
+
+    ctx.beginPath();
+    ctx.fillRect(0, rectHeight * 2 + rectMargin * 2 , rectWidth, rectHeight);
+
+    //흰색 부분
+    ctx.resetTransform();
+    ctx.translate(720,110);
+    ctx.rotate((25 + rotateDegree) * radian);
+    ctx.fillStyle = 'white';
+    ctx.beginPath();
+    ctx.fillRect(0, rectHeight * 2 + rectMargin * 2, rectMargin, rectHeight + 10);
+
+    ctx.resetTransform();
+    ctx.translate(720,110);
+    ctx.rotate((25 + rotateDegree) * radian);
+    ctx.fillStyle = 'white';
+    ctx.beginPath();
+    ctx.fillRect(0, 0, rectMargin, rectHeight + 10);
+
+    //곤 부분
+    ctx.resetTransform();
+    ctx.translate(610,470);
+    ctx.rotate((-90 + rotateDegree) * radian);
+    ctx.fillStyle = 'black';
+    ctx.beginPath();
+    ctx.fillRect(0, 0, rectWidth, rectHeight);
+
+    ctx.beginPath();
+    ctx.fillRect(0, rectHeight + rectMargin , rectWidth, rectHeight);
+
+    ctx.beginPath();
+    ctx.fillRect(0, rectHeight * 2 + rectMargin * 2 , rectWidth, rectHeight);
+
+    //흰색 부분
+    ctx.resetTransform();
+    ctx.translate(580,370);
+    ctx.rotate((-90 + rotateDegree) * radian);
+    ctx.fillStyle = 'white';
+    ctx.beginPath();
+    ctx.fillRect(0, rectHeight * 2 + rectMargin * 2, rectMargin, rectHeight + 100);
   })
 </script>
 
 
-<h2 class="title">태극마크 ver2 (색넣기)</h2>
-<span class="date">2021-02-19</span>
+<h2 class="title">태극기</h2>
+<span class="date">2021-02-22</span>
 <p class="description">
-32도 기울어진 반지름을 이용하여 만들었다. 원안에 원을 넣어서 반을 나눈 느낌으루...<br/>
-
-const radian = Math.PI / 180 ;<br/>
-<br/>
-const radius = 150;<br/>
-const rotateDegree = 32;<br/>
-radian,radius,rotateDegree 미리 선언해주면 사용하기 편하다.
+  
 </p>
 
 
@@ -117,7 +184,7 @@ radian,radius,rotateDegree 미리 선언해주면 사용하기 편하다.
   @import url("./canvasText.css");
 
   canvas {
-    background-color: #eee;
+    background-color: white;
     border: 1px solid black;
   }
 </style>
