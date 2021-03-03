@@ -5,7 +5,7 @@
 <style>
 
   .ddd {
-    width: 500px;
+    width: auto;
     height: 200px;
     background-color:gray;
   }
