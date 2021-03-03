@@ -30,7 +30,9 @@
   display:inline-block;
   white-space:nowrap;
     animation-name:marquee;
+    animation-timing-function:linear;
     animation-duration:10s;
+    animation-iteration-count:infinite;
 }
 
 @keyframes marquee {
