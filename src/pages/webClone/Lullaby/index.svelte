@@ -1,6 +1,6 @@
 <script>
   import Header from './header.svelte';
-import Mid from './Mid.svelte';
+  import MarQueeElement from './MarQueeElement.svelte'
   import Nav from './Nav.svelte';
 
 </script>
@@ -8,4 +8,4 @@ import Mid from './Mid.svelte';
 
 <Header/>
 <Nav/>
-<Mid/>
+<MarQueeElement/>
