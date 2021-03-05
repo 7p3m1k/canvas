@@ -2,6 +2,7 @@
   import DetailsImg from './DetailsImg.svelte';
   import Header from './header.svelte';
   import ItemSlider from './ItemSlider.svelte';
+  import Lookbook from './Lookbook.svelte';
   import MarQueeElement from './MarQueeElement.svelte'
   import TopSlider from './TopSlider.svelte';
 
@@ -12,4 +13,5 @@
 <TopSlider/>
 <MarQueeElement/>
 <ItemSlider/>
-<DetailsImg/> 
+<DetailsImg/>
+<Lookbook/>

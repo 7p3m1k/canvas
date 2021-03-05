@@ -3,25 +3,22 @@
 </script>
 
 <div class="detailsImg-wrapper">
-  <img src="https://source.unsplash.com/random"  alt="왼쪽" />
-  <img src="https://source.unsplash.com/random"  alt="오른쪽"/>
+  <img src="http://placeimg.com/640/480/any"  alt="왼쪽" />
+  <img src="http://placeimg.com/640/480/any"  alt="오른쪽"/>
 </div>
 
 
-<style lang="scss">
+<style lang="scss">      //flot 
 
   .detailsImg-wrapper {
     border: 1px solid black;
+    background-color: green;
+
     img {
-      display: block;
-      width: 959px;
-      height: 801px;
+      width: 50%;
       float: left;
       border-left: 1px solid black;
     }
   }
-
-
-
 
 </style>

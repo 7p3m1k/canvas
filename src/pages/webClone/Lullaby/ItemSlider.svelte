@@ -33,6 +33,7 @@
     }
 
     .slide-item {
+      margin: 50px 0 80px 0;
       width: auto;
       height: 512px;
       background-color: gray;
