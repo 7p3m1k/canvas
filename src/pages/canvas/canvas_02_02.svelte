@@ -1,35 +1,5 @@
 <script>
 
-  function drawRect() {
-    let myCanvas = document.getElementById("myCanvas");
-    let ctx = myCanvas.getContext('2d');
-
-    ctx.fillRect(25, 25, 100, 100);
-    ctx.clearRect(45, 45, 60, 60);
-    ctx.strokeRect(50, 50, 50, 50);
-  }
-
-  function drawArc() {
-    let myCanvas2 = document.getElementById("myCanvas2");
-    let ctx = myCanvas2.getContext('2d');
-
-    ctx.beginPath();
-    // 중심점 x, 중심점 y, 반지름의 길이, 시작점의 위치(0 -3시방향), 종료위치, 방향    Math.PI는 180도
-    ctx.arc(75, 75, 50, 0, Math.PI * 2, true);
-
-    ctx.moveTo(110, 75);
-    ctx.arc(75, 75, 35, 0, Math.PI, false);
-
-    ctx.moveTo(65, 65);
-    ctx.arc(60, 65, 5, 0, Math.PI * 2, true);
-
-    ctx.moveTo(95, 65);
-    ctx.arc(90, 65, 5, 0, Math.PI * 2, true);
-
-    ctx.stroke(); //선으로 그려진다
-     //ctx.fill(); //꽉차게 그려진다
-  }
-
   function drawLine() {
     let myCanvas3 = document.getElementById("myCanvas3");
     let ctx = myCanvas3.getContext('2d');
